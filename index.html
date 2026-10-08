@@ -1,0 +1,918 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Eventora - Event Booking Platform</title>
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- ================= NAVBAR ================= -->
+    <header class="navbar">
+        <div class="container nav-container">
+
+            <a href="#home" class="logo">
+                <span>🎟️</span> Eventora
+            </a>
+
+            <nav class="nav-menu" id="navMenu">
+                <a href="#home">Home</a>
+                <a href="#events">Events</a>
+                <a href="#categories">Categories</a>
+                <a href="#about">About</a>
+                <a href="#contact">Contact</a>
+            </nav>
+
+            <div class="nav-actions">
+                <button id="darkModeBtn" class="icon-btn" title="Dark Mode">🌙</button>
+                <button id="menuBtn" class="menu-btn">☰</button>
+            </div>
+
+        </div>
+    </header>
+
+
+    <!-- ================= HERO ================= -->
+    <section class="hero" id="home">
+
+        <div class="hero-overlay"></div>
+
+        <div class="container hero-content">
+
+            <div class="hero-text">
+                <p class="hero-small">✨ DISCOVER • BOOK • EXPERIENCE</p>
+
+                <h1>
+                    Find Your Next
+                    <span>Unforgettable Event</span>
+                </h1>
+
+                <p>
+                    Discover concerts, workshops, festivals, conferences
+                    and exciting experiences happening near you.
+                </p>
+
+                <div class="hero-buttons">
+                    <a href="#events" class="btn primary-btn">Explore Events</a>
+                    <a href="#categories" class="btn secondary-btn">View Categories</a>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- ================= SEARCH ================= -->
+    <section class="search-section">
+
+        <div class="container search-box">
+
+            <div class="search-input">
+                <span>🔍</span>
+                <input
+                    type="text"
+                    id="searchInput"
+                    placeholder="Search events..."
+                >
+            </div>
+
+            <select id="categoryFilter">
+                <option value="all">All Categories</option>
+                <option value="music">Music</option>
+                <option value="technology">Technology</option>
+                <option value="business">Business</option>
+                <option value="workshop">Workshop</option>
+                <option value="festival">Festival</option>
+            </select>
+
+            <select id="typeFilter">
+                <option value="all">All Types</option>
+                <option value="online">Online</option>
+                <option value="offline">Offline</option>
+            </select>
+
+            <button class="search-btn" id="searchBtn">
+                Search
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= CATEGORIES ================= -->
+    <section class="categories section" id="categories">
+
+        <div class="container">
+
+            <div class="section-heading">
+                <p>EXPLORE</p>
+                <h2>Event Categories</h2>
+                <span>Choose an experience that interests you</span>
+            </div>
+
+            <div class="category-grid">
+
+                <button class="category-card" data-category="music">
+                    <div class="category-icon">🎵</div>
+                    <h3>Music</h3>
+                    <p>Concerts & Live Shows</p>
+                </button>
+
+                <button class="category-card" data-category="technology">
+                    <div class="category-icon">💻</div>
+                    <h3>Technology</h3>
+                    <p>Tech Events & Conferences</p>
+                </button>
+
+                <button class="category-card" data-category="business">
+                    <div class="category-icon">💼</div>
+                    <h3>Business</h3>
+                    <p>Networking & Seminars</p>
+                </button>
+
+                <button class="category-card" data-category="workshop">
+                    <div class="category-icon">🎨</div>
+                    <h3>Workshop</h3>
+                    <p>Learn Something New</p>
+                </button>
+
+                <button class="category-card" data-category="festival">
+                    <div class="category-icon">🎉</div>
+                    <h3>Festival</h3>
+                    <p>Fun & Celebrations</p>
+                </button>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= EVENTS ================= -->
+    <section class="events section" id="events">
+
+        <div class="container">
+
+            <div class="section-heading heading-row">
+
+                <div>
+                    <p>DON'T MISS OUT</p>
+                    <h2>Upcoming Events</h2>
+                    <span>Find events you don't want to miss</span>
+                </div>
+
+                <span id="eventCount" class="event-count">
+                    6 Events
+                </span>
+
+            </div>
+
+
+            <div class="events-grid" id="eventsGrid">
+
+                <!-- Event 1 -->
+                <article
+                    class="event-card"
+                    data-name="summer music festival"
+                    data-category="music"
+                    data-type="offline"
+                    data-date="2026-11-15"
+                >
+
+                    <div class="event-image">
+                        <img
+                            src="https://images.unsplash.com/photo-1501386761578-eac5c94b800a?auto=format&fit=crop&w=900&q=80"
+                            alt="Music Festival"
+                        >
+                        <span class="event-category">Music</span>
+                    </div>
+
+                    <div class="event-content">
+
+                        <div class="event-date">
+                            <strong>15</strong>
+                            <span>NOV</span>
+                        </div>
+
+                        <div class="event-info">
+                            <h3>Summer Music Festival</h3>
+
+                            <p>🎵 Live music, DJs and amazing performances.</p>
+
+                            <div class="event-meta">
+                                <span>📍 Dehradun</span>
+                                <span>💰 ₹999</span>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="card-buttons">
+                        <button
+                            class="details-btn"
+                            data-event="Summer Music Festival"
+                        >
+                            View Details
+                        </button>
+
+                        <button
+                            class="book-btn"
+                            data-event="Summer Music Festival"
+                        >
+                            Book Now
+                        </button>
+                    </div>
+
+                </article>
+
+
+                <!-- Event 2 -->
+                <article
+                    class="event-card"
+                    data-name="future tech summit"
+                    data-category="technology"
+                    data-type="offline"
+                    data-date="2026-11-22"
+                >
+
+                    <div class="event-image">
+                        <img
+                            src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&fit=crop&w=900&q=80"
+                            alt="Technology Conference"
+                        >
+
+                        <span class="event-category">Technology</span>
+                    </div>
+
+                    <div class="event-content">
+
+                        <div class="event-date">
+                            <strong>22</strong>
+                            <span>NOV</span>
+                        </div>
+
+                        <div class="event-info">
+                            <h3>Future Tech Summit</h3>
+
+                            <p>💻 Explore AI, Web Development and Innovation.</p>
+
+                            <div class="event-meta">
+                                <span>📍 New Delhi</span>
+                                <span>💰 ₹799</span>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="card-buttons">
+
+                        <button
+                            class="details-btn"
+                            data-event="Future Tech Summit"
+                        >
+                            View Details
+                        </button>
+
+                        <button
+                            class="book-btn"
+                            data-event="Future Tech Summit"
+                        >
+                            Book Now
+                        </button>
+
+                    </div>
+
+                </article>
+
+
+                <!-- Event 3 -->
+                <article
+                    class="event-card"
+                    data-name="business networking meet"
+                    data-category="business"
+                    data-type="offline"
+                    data-date="2026-12-05"
+                >
+
+                    <div class="event-image">
+
+                        <img
+                            src="https://images.unsplash.com/photo-1511578314322-379afb476865?auto=format&fit=crop&w=900&q=80"
+                            alt="Business Networking"
+                        >
+
+                        <span class="event-category">Business</span>
+
+                    </div>
+
+                    <div class="event-content">
+
+                        <div class="event-date">
+                            <strong>05</strong>
+                            <span>DEC</span>
+                        </div>
+
+                        <div class="event-info">
+
+                            <h3>Business Networking Meet</h3>
+
+                            <p>💼 Connect with entrepreneurs and professionals.</p>
+
+                            <div class="event-meta">
+                                <span>📍 Mumbai</span>
+                                <span>💰 ₹599</span>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <div class="card-buttons">
+
+                        <button
+                            class="details-btn"
+                            data-event="Business Networking Meet"
+                        >
+                            View Details
+                        </button>
+
+                        <button
+                            class="book-btn"
+                            data-event="Business Networking Meet"
+                        >
+                            Book Now
+                        </button>
+
+                    </div>
+
+                </article>
+
+
+                <!-- Event 4 -->
+                <article
+                    class="event-card"
+                    data-name="creative design workshop"
+                    data-category="workshop"
+                    data-type="online"
+                    data-date="2026-12-12"
+                >
+
+                    <div class="event-image">
+
+                        <img
+                            src="https://images.unsplash.com/photo-1521737711867-e3b97375f902?auto=format&fit=crop&w=900&q=80"
+                            alt="Creative Workshop"
+                        >
+
+                        <span class="event-category">Workshop</span>
+
+                    </div>
+
+                    <div class="event-content">
+
+                        <div class="event-date">
+                            <strong>12</strong>
+                            <span>DEC</span>
+                        </div>
+
+                        <div class="event-info">
+
+                            <h3>Creative Design Workshop</h3>
+
+                            <p>🎨 Learn modern UI/UX and graphic design.</p>
+
+                            <div class="event-meta">
+                                <span>🌐 Online</span>
+                                <span>💰 ₹399</span>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <div class="card-buttons">
+
+                        <button
+                            class="details-btn"
+                            data-event="Creative Design Workshop"
+                        >
+                            View Details
+                        </button>
+
+                        <button
+                            class="book-btn"
+                            data-event="Creative Design Workshop"
+                        >
+                            Book Now
+                        </button>
+
+                    </div>
+
+                </article>
+
+
+                <!-- Event 5 -->
+                <article
+                    class="event-card"
+                    data-name="winter food festival"
+                    data-category="festival"
+                    data-type="offline"
+                    data-date="2026-12-20"
+                >
+
+                    <div class="event-image">
+
+                        <img
+                            src="https://images.unsplash.com/photo-1555939594-58d7cb561ad1?auto=format&fit=crop&w=900&q=80"
+                            alt="Food Festival"
+                        >
+
+                        <span class="event-category">Festival</span>
+
+                    </div>
+
+                    <div class="event-content">
+
+                        <div class="event-date">
+                            <strong>20</strong>
+                            <span>DEC</span>
+                        </div>
+
+                        <div class="event-info">
+
+                            <h3>Winter Food Festival</h3>
+
+                            <p>🍔 Taste delicious food from different places.</p>
+
+                            <div class="event-meta">
+                                <span>📍 Chandigarh</span>
+                                <span>💰 ₹299</span>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <div class="card-buttons">
+
+                        <button
+                            class="details-btn"
+                            data-event="Winter Food Festival"
+                        >
+                            View Details
+                        </button>
+
+                        <button
+                            class="book-btn"
+                            data-event="Winter Food Festival"
+                        >
+                            Book Now
+                        </button>
+
+                    </div>
+
+                </article>
+
+
+                <!-- Event 6 -->
+                <article
+                    class="event-card"
+                    data-name="digital marketing masterclass"
+                    data-category="business"
+                    data-type="online"
+                    data-date="2027-01-10"
+                >
+
+                    <div class="event-image">
+
+                        <img
+                            src="https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=900&q=80"
+                            alt="Digital Marketing"
+                        >
+
+                        <span class="event-category">Business</span>
+
+                    </div>
+
+                    <div class="event-content">
+
+                        <div class="event-date">
+                            <strong>10</strong>
+                            <span>JAN</span>
+                        </div>
+
+                        <div class="event-info">
+
+                            <h3>Digital Marketing Masterclass</h3>
+
+                            <p>📱 Learn SEO, social media and digital marketing.</p>
+
+                            <div class="event-meta">
+                                <span>🌐 Online</span>
+                                <span>💰 ₹499</span>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <div class="card-buttons">
+
+                        <button
+                            class="details-btn"
+                            data-event="Digital Marketing Masterclass"
+                        >
+                            View Details
+                        </button>
+
+                        <button
+                            class="book-btn"
+                            data-event="Digital Marketing Masterclass"
+                        >
+                            Book Now
+                        </button>
+
+                    </div>
+
+                </article>
+
+            </div>
+
+
+            <div id="noEvents" class="no-events">
+                <div>😔</div>
+                <h3>No Events Found</h3>
+                <p>Try changing your search or filter.</p>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= COUNTDOWN ================= -->
+    <section class="countdown-section">
+
+        <div class="container countdown-container">
+
+            <div>
+                <p class="hero-small">NEXT BIG EVENT</p>
+                <h2>Summer Music Festival</h2>
+                <p>Get ready for an unforgettable experience!</p>
+            </div>
+
+            <div class="countdown" id="countdown">
+
+                <div>
+                    <strong id="days">00</strong>
+                    <span>Days</span>
+                </div>
+
+                <div>
+                    <strong id="hours">00</strong>
+                    <span>Hours</span>
+                </div>
+
+                <div>
+                    <strong id="minutes">00</strong>
+                    <span>Minutes</span>
+                </div>
+
+                <div>
+                    <strong id="seconds">00</strong>
+                    <span>Seconds</span>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= ABOUT ================= -->
+    <section class="about section" id="about">
+
+        <div class="container about-grid">
+
+            <div class="about-image">
+
+                <img
+                    src="https://images.unsplash.com/photo-1492684223066-81342ee5ff30?auto=format&fit=crop&w=1000&q=80"
+                    alt="Event"
+                >
+
+            </div>
+
+            <div class="about-text">
+
+                <p class="section-label">ABOUT EVENTORA</p>
+
+                <h2>Making Every Event Memorable</h2>
+
+                <p>
+                    Eventora is a modern event discovery and booking
+                    platform designed to help people discover exciting
+                    events and book tickets easily.
+                </p>
+
+                <div class="about-features">
+
+                    <div>
+                        <span>🎟️</span>
+                        <div>
+                            <h3>Easy Booking</h3>
+                            <p>Book your tickets in just a few clicks.</p>
+                        </div>
+                    </div>
+
+                    <div>
+                        <span>🔒</span>
+                        <div>
+                            <h3>Secure Registration</h3>
+                            <p>Your booking information is handled securely.</p>
+                        </div>
+                    </div>
+
+                    <div>
+                        <span>📅</span>
+                        <div>
+                            <h3>Upcoming Events</h3>
+                            <p>Discover the latest events and experiences.</p>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= BOOKING MODAL ================= -->
+    <div class="modal" id="bookingModal">
+
+        <div class="modal-content">
+
+            <button class="close-modal" id="closeBooking">&times;</button>
+
+            <div class="modal-header">
+                <span>🎟️</span>
+                <h2>Book Your Tickets</h2>
+                <p>Reserve your spot today!</p>
+            </div>
+
+            <form id="bookingForm">
+
+                <div class="form-group">
+                    <label for="eventName">Selected Event</label>
+
+                    <select id="eventName" required>
+
+                        <option value="">Select Event</option>
+                        <option value="Summer Music Festival">
+                            Summer Music Festival
+                        </option>
+                        <option value="Future Tech Summit">
+                            Future Tech Summit
+                        </option>
+                        <option value="Business Networking Meet">
+                            Business Networking Meet
+                        </option>
+                        <option value="Creative Design Workshop">
+                            Creative Design Workshop
+                        </option>
+                        <option value="Winter Food Festival">
+                            Winter Food Festival
+                        </option>
+                        <option value="Digital Marketing Masterclass">
+                            Digital Marketing Masterclass
+                        </option>
+
+                    </select>
+                </div>
+
+
+                <div class="form-row">
+
+                    <div class="form-group">
+
+                        <label for="name">Full Name</label>
+
+                        <input
+                            type="text"
+                            id="name"
+                            placeholder="Enter your name"
+                            required
+                        >
+
+                    </div>
+
+                    <div class="form-group">
+
+                        <label for="phone">Phone Number</label>
+
+                        <input
+                            type="tel"
+                            id="phone"
+                            placeholder="Enter phone number"
+                            pattern="[0-9]{10}"
+                            required
+                        >
+
+                    </div>
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="email">Email Address</label>
+
+                    <input
+                        type="email"
+                        id="email"
+                        placeholder="Enter your email"
+                        required
+                    >
+
+                </div>
+
+
+                <div class="form-row">
+
+                    <div class="form-group">
+
+                        <label for="tickets">Number of Tickets</label>
+
+                        <select id="tickets" required>
+
+                            <option value="">Select</option>
+                            <option value="1">1 Ticket</option>
+                            <option value="2">2 Tickets</option>
+                            <option value="3">3 Tickets</option>
+                            <option value="4">4 Tickets</option>
+                            <option value="5">5 Tickets</option>
+
+                        </select>
+
+                    </div>
+
+                    <div class="form-group">
+
+                        <label for="payment">Payment Method</label>
+
+                        <select id="payment" required>
+
+                            <option value="">Select</option>
+                            <option value="upi">UPI</option>
+                            <option value="card">Credit / Debit Card</option>
+                            <option value="netbanking">Net Banking</option>
+
+                        </select>
+
+                    </div>
+
+                </div>
+
+
+                <button type="submit" class="submit-btn">
+                    Confirm Booking
+                </button>
+
+            </form>
+
+        </div>
+
+    </div>
+
+
+    <!-- ================= DETAILS MODAL ================= -->
+    <div class="modal" id="detailsModal">
+
+        <div class="modal-content details-modal">
+
+            <button class="close-modal" id="closeDetails">&times;</button>
+
+            <div id="eventDetailsContent"></div>
+
+        </div>
+
+    </div>
+
+
+    <!-- ================= SUCCESS MODAL ================= -->
+    <div class="modal" id="successModal">
+
+        <div class="modal-content success-content">
+
+            <div class="success-icon">✓</div>
+
+            <h2>Booking Successful!</h2>
+
+            <p id="successMessage">
+                Your booking has been confirmed.
+            </p>
+
+            <button class="btn primary-btn" id="closeSuccess">
+                Done
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <!-- ================= FOOTER ================= -->
+    <footer id="contact">
+
+        <div class="container footer-grid">
+
+            <div class="footer-about">
+
+                <a href="#home" class="logo">
+                    <span>🎟️</span> Eventora
+                </a>
+
+                <p>
+                    Discover, book and experience amazing events
+                    around you.
+                </p>
+
+                <div class="social-links">
+                    <a href="#" aria-label="Facebook">f</a>
+                    <a href="#" aria-label="Instagram">◎</a>
+                    <a href="#" aria-label="Twitter">𝕏</a>
+                    <a href="#" aria-label="LinkedIn">in</a>
+                </div>
+
+            </div>
+
+
+            <div class="footer-column">
+
+                <h3>Quick Links</h3>
+
+                <a href="#home">Home</a>
+                <a href="#events">Events</a>
+                <a href="#categories">Categories</a>
+                <a href="#about">About</a>
+
+            </div>
+
+
+            <div class="footer-column">
+
+                <h3>Categories</h3>
+
+                <a href="#events">Music</a>
+                <a href="#events">Technology</a>
+                <a href="#events">Business</a>
+                <a href="#events">Workshops</a>
+
+            </div>
+
+
+            <div class="footer-column">
+
+                <h3>Contact</h3>
+
+                <p>📧 support@eventora.com</p>
+                <p>📞 +91 98765 43210</p>
+                <p>📍 Dehradun, India</p>
+
+            </div>
+
+        </div>
+
+
+        <div class="footer-bottom">
+
+            <p>
+                © 2026 Eventora. All Rights Reserved.
+            </p>
+
+        </div>
+
+    </footer>
+
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+
+</body>
+</html>
